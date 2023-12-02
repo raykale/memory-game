@@ -1,0 +1,28 @@
+header {
+    text-align: center;
+    font-size: xx-large;
+    color: green;
+}
+
+h2 {
+    text-align: end;
+    color: green;
+}
+
+#table {
+    color: black;
+    /* border: 1vmin solid brown; */
+
+   
+
+}
+
+#cards > div {
+    display: grid;
+    /* grid-template-columns: repeat(4, 10vmin);  */
+    grid-template-rows: repeat(3, 20vmin);     
+    justify-content: center;
+    background-color: aquamarine;
+    border: 1vmin solid darkgreen;
+}
+
