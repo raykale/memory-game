@@ -1,3 +1,10 @@
+
+body { 
+    display: grid;
+    justify-content: center;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/024/987/443/non_2x/jellyfish-field-in-the-bottom-of-ocean-background-free-vector.jpg");
+    background-size: cover;
+}
 header {
     text-align: center;
     font-size: xx-large;
@@ -5,24 +12,48 @@ header {
 }
 
 h2 {
-    text-align: end;
+    width: 12vmin;
     color: green;
 }
 
-#table {
-    color: black;
-    /* border: 1vmin solid brown; */
-
-   
-
+.table {
+    width: 130vmin;
+    height: 80vmin;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 33%);
+    perspective: 100vmin;
 }
 
-#cards > div {
-    display: grid;
-    /* grid-template-columns: repeat(4, 10vmin);  */
-    grid-template-rows: repeat(3, 20vmin);     
-    justify-content: center;
-    background-color: aquamarine;
-    border: 1vmin solid darkgreen;
+.card {
+    width: 93%;
+    height: 92%;
+    color: aquamarine;
+    border: 1vmin solid darkcyan;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+
+
+.card:hover {
+    transform: scale(1.03);
+    transition: all .3s ease;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.frontcard, .backcard {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+}
+
+.backcard {
+    background-size: cover;
+    backface-visibility: hidden;
 }
 
